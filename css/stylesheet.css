@@ -1,63 +1,137 @@
-.container {
-  width: 710px;
+#navcontainer {
+	height: 30px;
+	position: absolute;
+	z-index: 300;	
+
 }
 
-body {
-  background: #cff;
+#navcontainer #current, #navcontainer .currentAncestor{
 }
 
-header {
-  padding-top: 20px;
+#navcontainer ul ul #current , #navcontainer ul ul .currentAncestor {
 }
 
-/* Links */
+/* Parent - Level 0 */
 
-a {
-  color: #09c;
-  text-decoration: none;
+#navcontainer ul{
+	margin: 0;
+	padding: 0;
+	z-index: 5;
+	list-style-type: none;
 }
 
-a:hover {
-  color: #069;
-  text-decoration: underline;
+#navcontainer li {
+	position: relative;
+	display: inline;
+	float: left;
 }
 
-a:visited {
-  color: #069;
+
+
+#navcontainer a {
+	display: block;
+	padding: 6px 15px 17px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 1.1em;
 }
 
-/* Navigation */
-
-nav {
-  float: right;
+#navcontainer a:hover {
+	background: transparent;
 }
 
-nav {
-  background-color: white;
-  padding: 0 0.7em;
-  white-space: nowrap;
+#navcontainer a:active {
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
+/* Child - Level 1 */
+/* All browsers will use this code, it will make the pop out menus work */
+
+
+#navcontainer ul ul {
+	position: absolute;
+	top: 30px;
+	left: 5px;
+	right: 0;
+	display: none;
+	z-index: 6;
+	font-size: 0.75em;
+	width: 173px;
+	padding: 0 0px;
+	margin-top: 10px;
 }
 
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0.2em 0;
+#navcontainer ul ul li {
+	display: block;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-left-width: 1px;
+	border-left-style: solid;
+	
 }
 
-nav ul li a {
-  padding: 0 5px;
-  font-weight: bold;
+#navcontainer ul ul a {
+	padding: 6px 0px 6px 8px;
+	display: block;
+	width: 163px;
+	height: auto;
 }
 
-nav ul li a:visited {
-  color: #09c;
+#navcontainer ul ul a:hover {
+
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+#navcontainer ul ul #current{
+}
+
+
+/* Child Level 3 */
+
+#navcontainer ul ul ul {
+	position: absolute;
+	left: 171px;
+	top: -11px;
+	z-index: 120;
+	font-size: 1em;
+}
+
+#navcontainer ul ul ul li { 
+
+}
+
+#navcontainer ul ul ul ul li { 
+}
+
+#navcontainer ul ul ul ul a{
+}
+
+#navcontainer ul ul ul ul a:hover{
+
+}
+
+div#navcontainer ul ul, div#navcontainer ul ul ul, div#navcontainer ul li:hover ul ul, div#navcontainer ul li:hover ul ul ul,
+div#navcontainer ul li:hover ul ul ul ul, div#navcontainer ul li:hover ul ul ul ul ul{
+display:none;
+}
+
+div#navcontainer ul li:hover ul, div#navcontainer ul ul li:hover ul, div#navcontainer ul ul ul li:hover ul, div#navcontainer ul ul
+ul ul li:hover ul, div#navcontainer ul ul ul ul ul li:hover ul{
+display:block;
+}
+/* @end */
+h1 {
+	font-size: 2em;
+	padding: 5px 0;
+	margin: 0;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 1.6;
+	padding: 5px 0;
+	margin: 0;
+	font-weight: normal;
 }
