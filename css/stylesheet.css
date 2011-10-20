@@ -12,6 +12,7 @@ span.error { /* mensajes de error de la pagina de registro */
   font-style:italic;
   position: relative;
   left:	150px;
+  font-size: 10px;
   
 }
 
