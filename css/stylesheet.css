@@ -1,137 +1,274 @@
-#navcontainer {
-	height: 30px;
-	position: absolute;
-	z-index: 300;	
-
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #404040;
+}
+html, body {
+  background-color: #ffffff;
 }
 
-#navcontainer #current, #navcontainer .currentAncestor{
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
 }
 
-#navcontainer ul ul #current , #navcontainer ul ul .currentAncestor {
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-/* Parent - Level 0 */
-
-#navcontainer ul{
-	margin: 0;
-	padding: 0;
-	z-index: 5;
-	list-style-type: none;
+div.pull-right {
+	    //float: left;
+	    margin: 5px 0 0;
+	    opacity: 1;
+	    position: relative;
+	    top:	5px;
+	  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+  line-height: 1;
+  font-family: inherit;
 }
 
-#navcontainer li {
-	position: relative;
-	display: inline;
-	float: left;
+ol, ul {
+  list-style: none;
 }
 
-
-
-#navcontainer a {
-	display: block;
-	padding: 6px 15px 17px;
-	text-decoration: none;
-	font-weight: normal;
-	font-size: 1.1em;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-#navcontainer a:hover {
-	background: transparent;
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  zoom: 1;
+}
+.container:before, .container:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
+}
+.container:after {
+  clear: both;
 }
 
-#navcontainer a:active {
+a {
+  color: #0069d6;
+  text-decoration: none;
+  line-height: inherit;
+  font-weight: inherit;
 }
 
-/* Child - Level 1 */
-/* All browsers will use this code, it will make the pop out menus work */
-
-
-#navcontainer ul ul {
-	position: absolute;
-	top: 30px;
-	left: 5px;
-	right: 0;
-	display: none;
-	z-index: 6;
-	font-size: 0.75em;
-	width: 173px;
-	padding: 0 0px;
-	margin-top: 10px;
+.pull-right {
+  float: right;
 }
 
-#navcontainer ul ul li {
-	display: block;
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-right-width: 1px;
-	border-right-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-left-width: 1px;
-	border-left-style: solid;
-	
+.row {
+  zoom: 1;
+  margin-left: -20px;
 }
-
-#navcontainer ul ul a {
-	padding: 6px 0px 6px 8px;
-	display: block;
-	width: 163px;
-	height: auto;
+.row:before, .row:after {
+  display: table;
+  content: "";
+  zoom: 1;
+  *display: inline;
 }
-
-#navcontainer ul ul a:hover {
-
+.row:after {
+  clear: both;
 }
-
-#navcontainer ul ul #current{
+[class*="span"] {
+  display: inline;
+  float: left;
+  margin-left: 20px;
 }
-
-
-/* Child Level 3 */
-
-#navcontainer ul ul ul {
-	position: absolute;
-	left: 171px;
-	top: -11px;
-	z-index: 120;
-	font-size: 1em;
+.span10 {
+  width: 580px;
 }
-
-#navcontainer ul ul ul li { 
-
+p {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin-bottom: 9px;
 }
-
-#navcontainer ul ul ul ul li { 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: #404040;
 }
-
-#navcontainer ul ul ul ul a{
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: #bfbfbf;
 }
-
-#navcontainer ul ul ul ul a:hover{
-
-}
-
-div#navcontainer ul ul, div#navcontainer ul ul ul, div#navcontainer ul li:hover ul ul, div#navcontainer ul li:hover ul ul ul,
-div#navcontainer ul li:hover ul ul ul ul, div#navcontainer ul li:hover ul ul ul ul ul{
-display:none;
-}
-
-div#navcontainer ul li:hover ul, div#navcontainer ul ul li:hover ul, div#navcontainer ul ul ul li:hover ul, div#navcontainer ul ul
-ul ul li:hover ul, div#navcontainer ul ul ul ul ul li:hover ul{
-display:block;
-}
-/* @end */
 h1 {
-	font-size: 2em;
-	padding: 5px 0;
-	margin: 0;
-	font-weight: normal;
+  margin-bottom: 18px;
+  font-size: 30px;
+  line-height: 36px;
+}
+h1 small {
+  font-size: 18px;
+}
+h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+ul, ol {
+  margin: 0 0 18px 25px;
 }
 
-h2 {
-	font-size: 1.6;
-	padding: 5px 0;
-	margin: 0;
-	font-weight: normal;
+ul {
+  list-style: disc;
+}
+li {
+  line-height: 18px;
+  color: #808080;
+}
+.topbar {
+  height: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  overflow: visible;
+}
+.topbar a {
+  color: #bfbfbf;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.topbar h3 a, .topbar .brand {
+  float: left;
+  display: block;
+  padding: 8px 20px 12px;
+  margin-left: -20px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1;
+}
+.topbar-inner, .topbar .fill {
+  background-color: #222;
+  background-color: #222222;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#333333), to(#222222));
+  background-image: -moz-linear-gradient(top, #333333, #222222);
+  background-image: -ms-linear-gradient(top, #333333, #222222);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #222222));
+  background-image: -webkit-linear-gradient(top, #333333, #222222);
+  background-image: -o-linear-gradient(top, #333333, #222222);
+  background-image: linear-gradient(top, #333333, #222222);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.topbar div > ul, .nav {
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+  position: relative;
+  left: 0;
+}
+
+.topbar div > ul > li, .nav > li {
+  display: block;
+  float: left;
+}
+.topbar div > ul a, .nav a {
+  display: block;
+  float: none;
+  padding: 10px 10px 11px;
+  line-height: 19px;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 17px;
+  padding-top: 17px;
+  border-top: 1px solid #eee;
+}
+.page-header {
+  margin-bottom: 17px;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.page-header h1 {
+  margin-bottom: 8px;
 }
