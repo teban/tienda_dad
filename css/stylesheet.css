@@ -9,10 +9,29 @@
 .round label {
 	color: #FFFFFF;
 }
-.boton {
+.boton_register {
 	position: relative;
-	left: 140px;
+	left: 220px;
 	bottom: -10px;
+}
+.boton_signin {
+	position: relative;
+	left: 160px;
+	bottom: -10px;
+}
+
+.input_register { /* forma register */
+	position: relative;
+	left: 100px;
+}
+#register_confirmpw { /* forma confirm password de register */
+	position: relative;
+	left: 50px;
+}
+
+.input_signin { /* forma signin*/
+	position: relative;
+	left: 50px;
 }
 
 body {
