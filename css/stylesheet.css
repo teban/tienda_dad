@@ -10,6 +10,7 @@
 span.error { /* mensajes de error de la pagina de registro */
   color:#660000;
   font-style:italic;
+  float:	right;
   position: relative;
   left:	150px;
   font-size: 10px;
@@ -19,16 +20,6 @@ span.error { /* mensajes de error de la pagina de registro */
 #conf_pw_register { /* mensaje de error de campo confirmar password de la pagina registro*/
 	position:	relative;
 	left: 100px;
-}
-
-#username_register {
-
-	font-size: 9px;
-}
-
-#email_error { /* mensaje de error de campo email de pagina de registro */
-	position: relative;
-	left: 190px;
 }
 
 .round label {
