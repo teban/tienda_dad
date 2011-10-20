@@ -84,7 +84,8 @@ function validatePwd() {
 
 function placeOrder(form) {
         if (validateEmail(form["email"], form["email_error"]) && validateName(form["fname"], form["fname_register"]) &&
-		validateLname(form["lname"], form["lname_register"]) && validateUsername(form["username"], form["username_register"]) && validatePwd()) {
+		validateLname(form["lname"], form["lname_register"]) && validateUsername(form["username"], form["username_register"]) &&
+		 validatePwd()) {
           // Submit the order to the server
 			form.submit();
         } 
