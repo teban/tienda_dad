@@ -6,27 +6,58 @@
     padding: 20px;
     width: 300px;
 }
+
+span.error { /* mensajes de error de la pagina de registro */
+  color:#660000;
+  font-style:italic;
+  position: relative;
+  left:	150px;
+  
+}
+
+#conf_pw_register { /* mensaje de error de campo confirmar password de la pagina registro*/
+	position:	relative;
+	left: 100px;
+}
+
+
+#email_error { /* mensaje de error de campo email de pagina de registro */
+	position: relative;
+	left: 190px;
+}
+
 .round label {
 	color: #FFFFFF;
+}
+
+.round a {
+	font-size: 10px;
+	position: relative;
+	left:	96px;
+	top: 5px;
 }
 .boton_register {
 	position: relative;
 	left: 220px;
-	bottom: -10px;
+	top: 10px;
 }
 .boton_signin {
 	position: relative;
 	left: 160px;
-	bottom: -10px;
+	top:	10px;
 }
 
-.input_register { /* forma register */
+.input_register { /* forma registrarr */
 	position: relative;
 	left: 100px;
 }
-#register_confirmpw { /* forma confirm password de register */
+#register_confirmpw { /* forma confirm password de registrar */
 	position: relative;
 	left: 50px;
+}
+#email_register {
+	position: relative;
+	left: 140px;
 }
 
 .input_signin { /* forma signin*/

@@ -14,6 +14,7 @@
     <!-- Le styles -->
 	<!--link href="css/bootstrap.css" rel="stylesheet"-->
     <link href="css/stylesheet.css" rel="stylesheet">
+    <script language="JavaScript" type="text/javascript" src="javascript/validacion_register.js"></script>
     <style type="text/css">
       /* Override some defaults */
       html, body {
@@ -114,14 +115,23 @@
             
             <div class="round" >
 	            <form action="servidor.html" method="get">
-	            	<label>First Name: <input type="text" size="8" name="fname" class="input_register" /></label><span id="fname_register"></span><br />
-	            	<label>Last Name: <input type="text" size="8" name="lname" class="input_register"/></label><span id="lname_register"></span><br />
-	            	<label>Username:&nbsp; <input type="text" size="8" name="username" class="input_register"/></label><span id="username_register"></span><br />
-	            	<label>Password:&nbsp;&nbsp; <input type="password" size="8" name="password" class="input_register"/></label><span id="password_register"></span><br />
-	            	<label>Confirm Password: <input type="password" size="8" name="confirm_password" id="register_confirmpw"/></label><span id="password_register"></span><br />
+	            	<label>First Name: <input type="text" size="8" name="fname" class="input_register" /></label><span id="fname_register"class="error"></span><br />
+	            	<label>Last Name: <input type="text" size="8" name="lname" class="input_register"/></label><span id="lname_register" class="error"></span><br />
+	            	<label>Username:&nbsp; <input type="text" size="8" name="username" class="input_register"/></label><span id="username_register" class="error"></span><br />
+	            	<label>Password:&nbsp;&nbsp; <input type="password" size="8" name="password" class="input_register"/></label><span id="password_register" class="error"></span><br />
+	            	<label>Confirm Password: <input type="password" size="8" name="confirm_password" id="register_confirmpw"/></label><span id="conf_pw_register" class="error"></span><br />
+	            	<label>Email: <input type="text" size="8" name="email" id="email_register" onblur="validateEmail(this, document.getElementById('email_error'))" /></label><span id="email_error" class="error"></span><br />
 	            	<input type="submit" value="Log in" class="boton_register"/>
 	            </form>
             </div>
+            <!--div class="round" id="error_messages">
+				<span class="error" id="fname_error">h</span><br />
+				<span class="error" id="lname_error">o</span><br />
+				<span class="error" id="username_error">o</span><br />
+				<span class="error" id="pw_error">l</span><br />
+				<span class="error" id="confirm_pw_error">a</span><br />
+				<span class="error" id="email_error">a</span><br />
+            </div-->
           </div>
 
         </div>
