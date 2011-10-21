@@ -49,6 +49,48 @@ function validateUsername(inputField, helpText) {
     	
     return validateRegEx(/[A-Za-z][^0-9]/, inputField.value, helpText, "Pon un nombre de usuario");
 }
+
+function validateAddress(inputField, helpText) {
+	if (!validateNonEmpty(inputField, helpText))
+    	return false;
+    	
+    return validateRegEx(true, inputField.value, helpText, "Escribe tu domicilio");
+}
+function validateCountry(inputField, helpText) {
+	if (!validateNonEmpty(inputField, helpText))
+    	return false;
+    	
+    return validateRegEx(/[A-Za-z][^0-9]/, inputField.value, helpText, "Escribe el pais donde vives");
+}
+
+function validateCity(inputField, helpText) {
+	if (!validateNonEmpty(inputField, helpText))
+    	return false;
+    	
+    return validateRegEx(/[A-Za-z][^0-9]/, inputField.value, helpText, "Escribe la ciudad donde vives");
+}
+
+function validateState(inputField, helpText) {
+	if (!validateNonEmpty(inputField, helpText))
+    	return false;
+    	
+    return validateRegEx(/[A-Za-z][^0-9]/, inputField.value, helpText, "Escribe el estado donde vives");
+}
+
+function validateZip(inputField, helpText) {
+	if (!validateNonEmpty(inputField, helpText))
+    	return false;
+    	
+    return validateRegEx(/[^A-Za-z][0-9]/, inputField.value, helpText, "Pon tu codigo postal");
+}
+
+function validatePhone(inputField, helpText) {
+	if (!validateNonEmpty(inputField, helpText))
+    	return false;
+    	
+    return validateRegEx(/[^A-Za-z][0-9]/, inputField.value, helpText, "Pon tu telefono");
+}
+
 function validatePwd() {
 	var invalid = " "; // Invalid character is a space
 	var minLength = 6; // Minimum length
@@ -83,9 +125,19 @@ function validatePwd() {
 }
 
 function placeOrder(form) {
-        if (validateEmail(form["email"], form["email_error"]) && validateName(form["fname"], form["fname_register"]) &&
-		validateLname(form["lname"], form["lname_register"]) && validateUsername(form["username"], form["username_register"]) &&
-		 validatePwd()) {
+        if (validateEmail(form["email"], form["email_error"]) 
+		&& validateName(form["fname"], form["fname_register"]) 
+		&& validateLname(form["lname"], form["lname_register"]) 
+		&& validateUsername(form["username"], form["username_register"])
+		&& validatePwd()
+		&& validateAddress(form["address1"],form["address1_register"])
+		&& validateAddress(form["address2"],form["address2_register"])	
+		&& validateCountry(form["country"], form["country_register"]
+		&& validateCity(form["city"],form["city_register"])
+		&& validateState(form["state"],form["state_register"])
+		&& validateZip(form["zip"],form["zip_register"])
+		&& validatePhone(form["phone"],form["phone_register"]))	
+		) {
           // Submit the order to the server
 			form.submit();
         } 

@@ -115,12 +115,26 @@
             
             <div class="round" >
 	            <form action="servidor.html" method="get" name="myForm" >
-	            	<label>First Name: <input type="text" size="10" name="fname" class="input_register" onblur="validateName(this, document.getElementById('fname_register'))"/></label><span id="fname_register"class="error"></span><br /><br />
+	            <fieldset><legend align="center">Personal Data</legend><br />
+                	<label>First Name: <input type="text" size="10" name="fname" class="input_register" onblur="validateName(this, document.getElementById('fname_register'))"/></label><span id="fname_register"class="error"></span><br /><br />
 	            	<label>Last Name: <input type="text" size="10" name="lname" class="input_register" onblur="validateLname(this, document.getElementById('lname_register'))"/></label><span id="lname_register" class="error"></span><br /><br />
 	            	<label>Username:&nbsp; <input type="text" size="10" name="username" class="input_register" onblur="validateUsername(this, document.getElementById('username_register'))" /></label><span id="username_register" class="error"></span><br /><br />
 	            	<label>Password:&nbsp;&nbsp; <input type="password" size="10" name="password" class="input_register" /></label><span id="password_register" class="error"></span><br /><br />
 	            	<label>Confirm Password: <input type="password" size="10" name="confirm_password" id="register_confirmpw"/></label><span id="conf_pw_register" class="error"></span><br /><br />
-	            	<label>Email: <input type="text" size="10" name="email" id="email_register" onblur="validateEmail(this, document.getElementById('email_error'))" /></label><span id="email_error" class="error"></span><br /><br />
+	            	<label>Email: <input type="text" size="10" name="email" id="email_register" onblur="validateEmail(this, document.getElementById('email_error'))" /></label><span id="email_error" class="error"></span></fieldset>
+                    
+                    <br /><br />
+                    
+                     <fieldset><legend align="center">Shipping Info</legend><br />
+                	<label>Street Address:&nbsp;&nbsp;<input type="text" size="10" name="address1" class="input_register" onblur="validateAddress(this, document.getElementById('address1_register'))"/></label><span id="address1_register"class="error"></span><br /><br />
+	            	<label>Street Address2:<input type="text" size="10" name="address2" class="input_register" onblur="validateAddress(this, document.getElementById('address2_register'))"/></label><span id="address2_register" class="error"></span><br /><br />
+	            	<label>Country:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; <input type="text" size="10" name="country" class="input_register" onblur="validateCountry(this, document.getElementById('country_register'))" /></label><span id="country_register" class="error"></span><br /><br />
+	            	<label>City:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  <input type="text" size="10" name="city" class="input_register" onBlur="validateCity(this, document.getElementById('city_register'))" /></label><span id="city_register" class="error"></span><br /><br />
+	            	<label>State:&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  <input type="text" size="10" name="state" class="input_register" onBlur="validateState(this, document.getElementById('state_register'))"/></label><span id="state_register" class="error"></span><br /><br />
+	            	<label>Zip Code: &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;  <input type="text" size="10" name="zip" id="zip" onblur="validateZip(this, document.getElementById('zip_register'))" /></label><span id="zip_register" class="error"></span><br /><br />
+					<label>Phone Number: &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; <input type="text" size="10" name="phone" id="phone" onblur="validatePhone(this, document.getElementById('phone_register'))"/></label><span id="phone_register" class="error"></span><br /><br />                    </fieldset>
+                    
+                    <br /><br />
 	            	<input type="button" value="Register" class="boton_register" onclick="placeOrder(this.form)" />
 	            </form>
             </div>
