@@ -130,13 +130,6 @@ function placeOrder(form) {
 		&& validateLname(form["lname"], form["lname_register"]) 
 		&& validateUsername(form["username"], form["username_register"])
 		&& validatePwd()
-		&& validateAddress(form["address1"],form["address1_register"])
-		&& validateAddress(form["address2"],form["address2_register"])	
-		&& validateCountry(form["country"], form["country_register"]
-		&& validateCity(form["city"],form["city_register"])
-		&& validateState(form["state"],form["state_register"])
-		&& validateZip(form["zip"],form["zip_register"])
-		&& validatePhone(form["phone"],form["phone_register"]))	
 		) {
           // Submit the order to the server
 			form.submit();
